@@ -1,1 +1,1 @@
-worker: python ladder_bot.py
+worker: python -u ladder_bot.py
