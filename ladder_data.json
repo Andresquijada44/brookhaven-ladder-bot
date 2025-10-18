@@ -1,0 +1,404 @@
+{
+  "players": [
+    {
+      "name": "Mason Vaughan",
+      "user_id": null
+    },
+    {
+      "name": "Wesley Cotton",
+      "user_id": null
+    },
+    {
+      "name": "Miguel Rooney",
+      "user_id": null
+    },
+    {
+      "name": "James Russ",
+      "user_id": null
+    },
+    {
+      "name": "Marko Mikic",
+      "user_id": null
+    },
+    {
+      "name": "Caleb Sammer",
+      "user_id": null
+    },
+    {
+      "name": "Andres Quijada",
+      "user_id": null
+    },
+    {
+      "name": "Raghav Jayamanuthyraman",
+      "user_id": null
+    },
+    {
+      "name": "Manas Kondapalli",
+      "user_id": null
+    },
+    {
+      "name": "Agastya Singh",
+      "user_id": null
+    },
+    {
+      "name": "Dev Masingka",
+      "user_id": null
+    },
+    {
+      "name": ".    Kaushik Poreddy",
+      "user_id": null
+    },
+    {
+      "name": "Cole McGee",
+      "user_id": null
+    },
+    {
+      "name": "Henry Brickbolz",
+      "user_id": null
+    },
+    {
+      "name": "Charlie Morris",
+      "user_id": null
+    },
+    {
+      "name": "Sammy Giraldo",
+      "user_id": null
+    },
+    {
+      "name": "Kate Craver",
+      "user_id": null
+    },
+    {
+      "name": "Gentry Eddins",
+      "user_id": null
+    },
+    {
+      "name": "Tomas Giraldo",
+      "user_id": null
+    },
+    {
+      "name": "Diyah Daniels",
+      "user_id": null
+    },
+    {
+      "name": "Ayaan Nathani",
+      "user_id": null
+    },
+    {
+      "name": "Ethan Sammer",
+      "user_id": null
+    },
+    {
+      "name": "Meghana Ravi",
+      "user_id": null
+    },
+    {
+      "name": "Dallas King Ehau",
+      "user_id": null
+    },
+    {
+      "name": "Gefestion Copeland",
+      "user_id": null
+    },
+    {
+      "name": "Erin Gandy",
+      "user_id": null
+    },
+    {
+      "name": "Ava Terefe",
+      "user_id": null
+    },
+    {
+      "name": "Maddie Medina",
+      "user_id": null
+    },
+    {
+      "name": "Andres Anzola",
+      "user_id": null
+    },
+    {
+      "name": "Jack Giseburt",
+      "user_id": null
+    },
+    {
+      "name": "Alejandro Zambrana",
+      "user_id": null
+    },
+    {
+      "name": "Khloe Schefke",
+      "user_id": null
+    },
+    {
+      "name": "Dani Grant",
+      "user_id": null
+    },
+    {
+      "name": "James Lange",
+      "user_id": null
+    },
+    {
+      "name": "Brooks Vaughan",
+      "user_id": null
+    },
+    {
+      "name": "Lorenzo Garcia",
+      "user_id": null
+    },
+    {
+      "name": "Allen Hou",
+      "user_id": null
+    },
+    {
+      "name": "Claire Terefe",
+      "user_id": null
+    },
+    {
+      "name": "Yael Modrymekian",
+      "user_id": null
+    },
+    {
+      "name": "Olivia Chen",
+      "user_id": null
+    },
+    {
+      "name": "Westin Eddins",
+      "user_id": null
+    },
+    {
+      "name": "Aiden li",
+      "user_id": null
+    },
+    {
+      "name": "Abby Thomson",
+      "user_id": null
+    },
+    {
+      "name": "Eridan Copeland",
+      "user_id": null
+    },
+    {
+      "name": "Gloria Sun",
+      "user_id": null
+    },
+    {
+      "name": "Owen Pope",
+      "user_id": null
+    },
+    {
+      "name": "Aaryan Birudaraju",
+      "user_id": null
+    },
+    {
+      "name": "Stella Smith",
+      "user_id": null
+    },
+    {
+      "name": "Trent Wilshere",
+      "user_id": null
+    },
+    {
+      "name": "Harris Benyo",
+      "user_id": null
+    },
+    {
+      "name": "Dylon Welp",
+      "user_id": null
+    },
+    {
+      "name": "Emma Zhang",
+      "user_id": null
+    },
+    {
+      "name": "Bobby Battle",
+      "user_id": null
+    },
+    {
+      "name": "Andres Zambrana",
+      "user_id": null
+    },
+    {
+      "name": "Aspen Sinville",
+      "user_id": null
+    },
+    {
+      "name": "Vivienne devittorio",
+      "user_id": null
+    },
+    {
+      "name": "Eloy Tyagi",
+      "user_id": null
+    },
+    {
+      "name": "Stella Fisher",
+      "user_id": null
+    },
+    {
+      "name": "Ty Vander Weelden",
+      "user_id": null
+    },
+    {
+      "name": "Lucas Rich",
+      "user_id": null
+    },
+    {
+      "name": "Henley Dorgan",
+      "user_id": null
+    },
+    {
+      "name": "Alice Costa",
+      "user_id": null
+    },
+    {
+      "name": "Aanya Birudaraju",
+      "user_id": null
+    },
+    {
+      "name": "Chloe Tandon",
+      "user_id": null
+    }
+  ],
+  "pairings": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      13,
+      14
+    ],
+    [
+      15,
+      16
+    ],
+    [
+      17,
+      18
+    ],
+    [
+      19,
+      20
+    ],
+    [
+      21,
+      22
+    ],
+    [
+      23,
+      24
+    ],
+    [
+      25,
+      26
+    ],
+    [
+      27,
+      28
+    ],
+    [
+      29,
+      30
+    ],
+    [
+      31,
+      32
+    ],
+    [
+      33,
+      34
+    ],
+    [
+      35,
+      36
+    ],
+    [
+      37,
+      38
+    ],
+    [
+      39,
+      40
+    ],
+    [
+      41,
+      42
+    ],
+    [
+      43,
+      44
+    ],
+    [
+      45,
+      46
+    ],
+    [
+      47,
+      48
+    ],
+    [
+      49,
+      50
+    ],
+    [
+      51,
+      52
+    ],
+    [
+      53,
+      54
+    ],
+    [
+      55,
+      56
+    ],
+    [
+      57,
+      58
+    ],
+    [
+      59,
+      60
+    ],
+    [
+      61,
+      62
+    ],
+    [
+      63,
+      64
+    ]
+  ],
+  "round": 2,
+  "history": [
+    {
+      "timestamp": "2025-10-18T02:27:50.393544+00:00",
+      "round": 1,
+      "winner_rank_pre": 1,
+      "loser_rank_pre": 2,
+      "winner": "Mason Vaughan",
+      "loser": "Wesley Cotton",
+      "score": "6-2 6-4",
+      "reporter_id": 692200166580551760,
+      "rule": "SWAP_ONLY"
+    }
+  ]
+}
