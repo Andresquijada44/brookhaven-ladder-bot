@@ -6,20 +6,44 @@ import sys, types
 if sys.version_info >= (3, 13) and "audioop" not in sys.modules:
     sys.modules["audioop"] = types.ModuleType("audioop")
 
-# Windows event loop fix for aio libs
+# Windows event loop fix for aio libs (keep this once)
+import sys
 import asyncio
 if sys.platform.startswith("win"):
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-# -------------------------------------------------------------
 
-import os
-import json
+# --- Persistent storage (keep this once) ---
+import os, json
+
+# Use /data in Railway (persistent volume), or DATA_DIR env var locally
+DATA_DIR = os.getenv("DATA_DIR", "/data")
+os.makedirs(DATA_DIR, exist_ok=True)
+DATA_FILE = os.path.join(DATA_DIR, "ladder_data.json")
+
+def load_data():
+    try:
+        with open(DATA_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {"players": [], "pairings": [], "round": 0, "history": []}
+    except json.JSONDecodeError:
+        # If file is corrupted, start fresh (or you can raise)
+        return {"players": [], "pairings": [], "round": 0, "history": []}
+
+def save_data(data: dict):
+    tmp = DATA_FILE + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+    os.replace(tmp, DATA_FILE)
+
 import re
 from datetime import datetime, timezone, date
 from typing import List, Dict, Optional, Tuple
 
 import discord
 from discord import app_commands
+
+
 
 # ===================== AI (optional) =====================
 AI_ENABLED = True
@@ -62,6 +86,25 @@ LADDER_RULE = "SWAP_ONLY"
 
 # Role required for admin commands (set None to allow anyone)
 ADMIN_ROLE_NAME = "Ladder Admin"
+
+# ---- PRIVACY: allow only specific Discord users to use any commands ----
+ALLOWED_USER_IDS = {692200166580551760}  # <— your user ID
+
+async def _only_allowed(interaction: discord.Interaction) -> bool:
+    # Return True to allow; False (or raise) to block.
+    return interaction.user.id in ALLOWED_USER_IDS
+
+@client.tree.error
+async def on_app_command_error(interaction: discord.Interaction, error: app_commands.AppCommandError):
+    # Friendly message if someone else tries to use a command
+    if isinstance(error, app_commands.CheckFailure):
+        try:
+            if not interaction.response.is_done():
+                await interaction.response.send_message("❌ This bot is private.", ephemeral=True)
+            else:
+                await interaction.followup.send("❌ This bot is private.", ephemeral=True)
+        except Exception:
+            pass
 
 # ===================== STORAGE =====================
 def load_data() -> Dict:
@@ -241,7 +284,11 @@ class LadderBot(discord.Client):
         super().__init__(intents=intents)
         self.tree = app_commands.CommandTree(self)
 
-    async def setup_hook(self):
+    async def setup_hook(self): 
+
+# Make all slash commands private to ALLOWED_USER_IDS
+        self.tree.add_check(_only_allowed)
+
         if GUILD_ID:
             guild = discord.Object(id=GUILD_ID)
             self.tree.copy_global_to(guild=guild)
@@ -391,3 +438,4 @@ if __name__ == "__main__":
     if not token:
         raise SystemExit("Please set DISCORD_TOKEN env var.")
     client.run(token)
+
